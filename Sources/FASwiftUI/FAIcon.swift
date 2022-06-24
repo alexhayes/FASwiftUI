@@ -36,9 +36,9 @@ public enum FAStyle: String, Codable {
 // ======================================================= //
 
 enum FACollection: String {
-    case pro = "Font Awesome 5 Pro"
-    case free = "Font Awesome 5 Free"
-    case brands = "Font Awesome 5 Brands"
+    case pro = "Font Awesome 6 Pro"
+    case free = "Font Awesome 6 Free"
+    case brands = "Font Awesome 6 Brands"
     
     static var availableCollection: [FACollection] {
         var result = [FACollection]()
