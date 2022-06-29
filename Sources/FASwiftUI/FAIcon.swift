@@ -16,6 +16,7 @@ public enum FAStyle: String, Codable {
     case light
     case regular
     case solid
+    case thin
     case brands
     case duotone
     
@@ -25,6 +26,8 @@ public enum FAStyle: String, Codable {
             return .light
         case .solid:
             return .heavy
+        case .thin:
+            return .thin
         default:
             return .regular
         }
