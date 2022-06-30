@@ -83,3 +83,38 @@ struct ContentView: View {
 ```
 
 ![Regualr Icon Screenshot](https://raw.githubusercontent.com/mattmaddux/FASwiftUI/master/icon-red.png)
+
+Have the user select an icon with an easy string binding (not available on macOS)
+
+```swift
+import SwiftUI
+import FASwiftUI
+
+struct ContentView: View {
+    
+    @State var selectedIcon: String?
+    @State var showingPicker: Bool = false
+    
+    var body: some View {
+        VStack {
+            FAText(iconName: selectedIcon ?? "square-question", size: 200)
+            Button(action: {
+                self.showingPicker = true
+            }) {
+                Text("Choose icon")
+            }
+        }
+        .sheet(isPresented: $showingPicker) {
+            FAPicker(showing: self.$showingPicker, selected: self.$selectedIcon)
+        }
+    }
+}
+```
+![Regualr Icon Screenshot](https://raw.githubusercontent.com/mattmaddux/FASwiftUI/master/picker.gif)
+
+Or perform a search manually for a dictionary of Icons
+
+
+### Dependencies (Auto Installed with Swift Package)
+----------------------------------
+QGrid - https://github.com/Q-Mobile/QGrid

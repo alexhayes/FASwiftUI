@@ -39,7 +39,7 @@ public struct FAText: View {
         if let icon = FontAwesome.shared.icon(byName: self.iconName) {
             self.icon = icon
         } else {
-            self.icon = FontAwesome.shared.icon(byName: "question-circle")!
+            self.icon = FontAwesome.shared.icon(byName: "circle-question")!
             self.style = .regular
             print("FASwiftUI: Icon \"\(iconName)\" not found. Check list at https://fontawesome.com/icons for set availability.")
         }
